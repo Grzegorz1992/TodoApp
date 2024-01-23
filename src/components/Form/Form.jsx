@@ -1,3 +1,8 @@
 export function Form() {
-    return <form></form>
+	return (
+		<form>
+			<input type="text" />
+			<button>Dodaj</button>
+		</form>
+	);
 }
