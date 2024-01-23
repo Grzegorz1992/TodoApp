@@ -1,7 +1,7 @@
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
-	return <div>
+	return <div className={styles.container}>
    <header>
     <h1>Do zrobienia</h1>
     <h2>5 zadań</h2>
