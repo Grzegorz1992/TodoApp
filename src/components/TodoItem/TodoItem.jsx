@@ -8,7 +8,7 @@ export function TodoItem({ name, done }) {
 				{name}
 			</span>
 			{!done && <Button>Zrobione</Button>}
-			<Button>Usuń</Button>
+			<Button className={styles.redButton}>Usuń</Button>
 		</li>
 	);
 }

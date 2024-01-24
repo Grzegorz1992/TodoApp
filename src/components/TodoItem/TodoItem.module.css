@@ -16,3 +16,13 @@
 .done {
     text-decoration: line-through;
 }
+
+.redButton {
+    color: tomato;
+	border: solid 1px currentColor;
+}
+
+.redButton:hover {
+    color: #fff;
+    background-color: tomato;
+}
