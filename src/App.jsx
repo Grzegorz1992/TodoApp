@@ -6,10 +6,36 @@ import { getSubheading } from "./utils/getSubheading";
 
 function App() {
 	const [isFormShown, setIsFormShown] = useState(false);
-	const todos = [
+	const [todos, setTodos] = useState([
 		{ name: "Zapłać rachunki", done: false, id: 1 },
 		{ name: "Wyrzuć śmieci", done: true, id: 2 },
-	];
+	]);
+
+	function addItem(newTodoName) {
+		setTodos((prevTodos) => [
+			...prevTodos,
+			{ name: newTodoName, done: false, id: Math.random() },
+		]);
+		setIsFormShown(false);
+	}
+
+	function deleteItem(id) {
+		setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+	}
+
+	function finishItem(id) {
+		setTodos((prevTodos) =>
+			prevTodos.map((todo) => {
+				if (todo.id !== id) {
+					return todo;
+				}
+				return {
+					...todo,
+					done: true,
+				};
+			})
+		);
+	}
 
 	return (
 		<div className={styles.container}>
@@ -27,10 +53,18 @@ function App() {
 					</button>
 				)}
 			</header>
-			{isFormShown && <Form />}
+			{isFormShown && (
+				<Form onFormSubmit={(newTodoName) => addItem(newTodoName)} />
+			)}
 			<ul>
 				{todos.map(({ id, name, done }) => (
-					<TodoItem key={id} name={name} done={done} />
+					<TodoItem
+						key={id}
+						name={name}
+						done={done}
+						onDeleteButtonClick={() => deleteItem(id)}
+						onDoneButtonClick={() => finishItem(id)}
+					/>
 				))}
 			</ul>
 		</div>
