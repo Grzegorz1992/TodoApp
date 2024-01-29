@@ -16,6 +16,7 @@ export function TodoItem({
 			<Button onClick={onDeleteButtonClick} className={styles.redButton}>
 				Usuń
 			</Button>
+			<Button>Edytuj</Button>
 		</li>
 	);
 }
