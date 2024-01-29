@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Button } from "../Button/Button";
 import styles from "./Form.module.css";
 
 export function Form({ onFormSubmit }) {
 	const [inputValue, setInputValue] = useState("");
+
 	return (
 		<form
 			onSubmit={(e) => {
@@ -12,8 +12,20 @@ export function Form({ onFormSubmit }) {
 			}}
 			className={styles.form}
 		>
-			<input value={inputValue} onChange={(e) => setInputValue(e.target.value)} className={styles.input} type="text" />
-			<Button>Dodaj</Button>
+			<input
+				value={inputValue}
+				onChange={(e) => setInputValue(e.target.value)}
+				className={styles.input}
+				type="text"
+			/>
+			<button
+				className={
+					inputValue.length === 0 ? styles.disabledButton : styles.formButton
+				}
+				disabled={inputValue.length === 0}
+			>
+				Dodaj
+			</button>
 		</form>
 	);
 }
