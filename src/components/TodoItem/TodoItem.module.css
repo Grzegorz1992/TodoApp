@@ -14,15 +14,24 @@
 }
 
 .done {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .redButton {
-    color: tomato;
+	color: tomato;
 	border: solid 1px currentColor;
 }
 
 .redButton:hover {
-    color: #fff;
-    background-color: tomato;
+	color: #fff;
+	background-color: tomato;
+}
+
+.editButton {
+	color: rgb(15, 193, 15);
+	border: solid 1px currentColor;
+}
+.editButton:hover {
+	color: #fff;
+	background-color: rgb(15, 193, 15);
 }
