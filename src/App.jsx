@@ -65,6 +65,7 @@ function App() {
 						done={done}
 						onDeleteButtonClick={() => deleteItem(id)}
 						onDoneButtonClick={() => finishItem(id)}
+					
 					/>
 				))}
 			</ul>

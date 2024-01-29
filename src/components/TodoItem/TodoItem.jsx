@@ -6,7 +6,7 @@ export function TodoItem({
 	done,
 	onDeleteButtonClick,
 	onDoneButtonClick,
-	onEditButtonClick
+	onEditButtonClick,
 }) {
 	return (
 		<li className={styles.item}>
@@ -17,7 +17,10 @@ export function TodoItem({
 			<Button onClick={onDeleteButtonClick} className={styles.redButton}>
 				Usuń
 			</Button>
-			<Button onClick={onEditButtonClick} className={styles.editButton}>Edytuj</Button>
+			<Button onClick={onEditButtonClick} className={styles.editButton}>
+				Edytuj
+			</Button>
+			<Button>↑</Button>
 		</li>
 	);
 }
