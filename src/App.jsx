@@ -10,6 +10,7 @@ function App() {
 		{ name: "Zapłać rachunki", done: false, id: 1 },
 		{ name: "Wyrzuć śmieci", done: true, id: 2 },
 	]);
+	
 
 	function addItem(newTodoName) {
 		setTodos((prevTodos) => [

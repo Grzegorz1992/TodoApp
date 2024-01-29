@@ -9,3 +9,27 @@
 	border: solid 1px currentColor;
 	border-radius: 4px;
 }
+
+.formButton {
+	color: var(--color-main);
+	background-color: transparent;
+	border: solid 1px currentColor;
+	border-radius: 4px;
+	padding: 4px 8px;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover {
+		color: #fff;
+		background-color: var(--color-main);
+	}
+}
+
+.disabledButton {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+	border-radius: 4px;
+	padding: 4px 8px;
+}
+
