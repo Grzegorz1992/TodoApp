@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import { Form } from "./components/Form/Form";
 import { TodoItem } from "./components/TodoItem/TodoItem";
 import { getSubheading } from "./utils/getSubheading";
+import { DragDropContext } from 'react-beautiful-dnd';
 
 function App() {
 	const [isFormShown, setIsFormShown] = useState(false);
@@ -52,7 +53,6 @@ function App() {
 			const draggedIndex = todos.findIndex((todo) => todo.id === draggedItem);
 			const dropIndex = todos.findIndex((todo) => todo.id === id);
 
-			// Zamiana miejscami elementów w tablicy
 			[updatedTodos[draggedIndex], updatedTodos[dropIndex]] = [
 				updatedTodos[dropIndex],
 				updatedTodos[draggedIndex],
