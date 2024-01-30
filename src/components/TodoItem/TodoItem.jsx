@@ -20,7 +20,7 @@ export function TodoItem({
 			<Button onClick={onEditButtonClick} className={styles.editButton}>
 				Edytuj
 			</Button>
-			<Button>↑</Button>
+			
 		</li>
 	);
 }
