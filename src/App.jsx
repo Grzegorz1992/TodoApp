@@ -10,7 +10,7 @@ function App() {
 		{ name: "Zapłać rachunki", done: false, id: 1 },
 		{ name: "Wyrzuć śmieci", done: true, id: 2 },
 	]);
-	
+	const [draggedItem, setDraggedItem] = useState(null);
 
 	function addItem(newTodoName) {
 		setTodos((prevTodos) => [
@@ -36,6 +36,31 @@ function App() {
 				};
 			})
 		);
+	}
+
+	function handleDragStart(id) {
+		setDraggedItem(id);
+	}
+
+	function handleDragOver(event) {
+		event.preventDefault();
+	}
+
+	function handleDrop(id) {
+		if (draggedItem !== id) {
+			const updatedTodos = [...todos];
+			const draggedIndex = todos.findIndex((todo) => todo.id === draggedItem);
+			const dropIndex = todos.findIndex((todo) => todo.id === id);
+
+			// Zamiana miejscami elementów w tablicy
+			[updatedTodos[draggedIndex], updatedTodos[dropIndex]] = [
+				updatedTodos[dropIndex],
+				updatedTodos[draggedIndex],
+			];
+
+			setTodos(updatedTodos);
+			setDraggedItem(null);
+		}
 	}
 
 	return (
@@ -65,7 +90,9 @@ function App() {
 						done={done}
 						onDeleteButtonClick={() => deleteItem(id)}
 						onDoneButtonClick={() => finishItem(id)}
-					
+						onDragStart={() => handleDragStart(id)}
+						onDragOver={handleDragOver}
+						onDrop={() => handleDrop(id)}
 					/>
 				))}
 			</ul>
