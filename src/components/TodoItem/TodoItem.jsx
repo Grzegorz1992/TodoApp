@@ -21,8 +21,12 @@ export function TodoItem({
 				Edytuj
 			</Button>
 			<div className={styles.upDownButtons}>
-				<Button className={styles.upDownButton}>△</Button>
-				<Button className={styles.upDownButton}>▽</Button>
+				<Button className={styles.upButton}>
+					<span className={styles.arrowUp}>▲</span>
+				</Button>
+				<Button className={styles.downButton}>
+					<span className={styles.arrowDown}>▼</span>
+				</Button>
 			</div>
 		</li>
 	);
