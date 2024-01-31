@@ -18,11 +18,11 @@ export function TodoItem({
 	}
 
 	function onCancelEditedTodo() {
-		setEditTodo(false)
+		setEditTodo(false);
 	}
 
 	function onSaveEditedTodo() {
-		
+		setEditTodo(false);
 	}
 
 	return (
@@ -30,7 +30,7 @@ export function TodoItem({
 			{!editTodo ? (
 				<li className={styles.item}>
 					<span className={`${styles.name} ${done ? styles.done : ""}`}>
-						{name}
+						{inputValue.length > 1 ? inputValue : name}
 					</span>
 					{!done && <Button onClick={onDoneButtonClick}>Zrobione</Button>}
 					<Button onClick={onDeleteButtonClick} className={styles.redButton}>
@@ -56,7 +56,7 @@ export function TodoItem({
 						className={styles.input}
 						type="text"
 					/>
-					<Button>Zapisz</Button>
+					<Button onClick={onSaveEditedTodo}>Zapisz</Button>
 					<Button onClick={onCancelEditedTodo}>Anuluj</Button>
 				</li>
 			)}
