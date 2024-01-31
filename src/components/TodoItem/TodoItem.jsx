@@ -20,6 +20,10 @@ export function TodoItem({
 			<Button onClick={onEditButtonClick} className={styles.editButton}>
 				Edytuj
 			</Button>
+			<div className={styles.upDownButtons}>
+				<Button className={styles.upDownButton}>△</Button>
+				<Button className={styles.upDownButton}>▽</Button>
+			</div>
 		</li>
 	);
 }
