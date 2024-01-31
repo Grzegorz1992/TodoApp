@@ -7,6 +7,8 @@ export function TodoItem({
 	onDeleteButtonClick,
 	onDoneButtonClick,
 	onEditButtonClick,
+	onUpButtonClick,
+	onDownButtonClick,
 }) {
 	return (
 		<li className={styles.item}>
@@ -21,10 +23,10 @@ export function TodoItem({
 				Edytuj
 			</Button>
 			<div className={styles.upDownButtons}>
-				<Button className={styles.upButton}>
+				<Button onClick={onUpButtonClick} className={styles.upButton}>
 					<span className={styles.arrowUp}>▲</span>
 				</Button>
-				<Button className={styles.downButton}>
+				<Button onClick={onDownButtonClick} className={styles.downButton}>
 					<span className={styles.arrowDown}>▼</span>
 				</Button>
 			</div>

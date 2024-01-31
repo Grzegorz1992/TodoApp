@@ -37,6 +37,43 @@ function App() {
 		);
 	}
 
+	function moveUpItem(id) {
+		const updatedTodos = [...todos];
+		const index = updatedTodos.findIndex((todo) => todo.id === id);
+
+		if (index > 0) {
+			[updatedTodos[index - 1], updatedTodos[index]] = [
+				updatedTodos[index],
+				updatedTodos[index - 1],
+			];
+
+			setTodos(updatedTodos);
+		} else {
+			const [movedItem] = updatedTodos.splice(index, 1);
+			updatedTodos.push(movedItem);
+
+			setTodos(updatedTodos);
+		}
+	}
+	function moveDownItem(id) {
+		const updatedTodos = [...todos];
+		const index = updatedTodos.findIndex((todo) => todo.id === id);
+
+		if (index < updatedTodos.length - 1) {
+			[updatedTodos[index], updatedTodos[index + 1]] = [
+				updatedTodos[index + 1],
+				updatedTodos[index],
+			];
+
+			setTodos(updatedTodos);
+		} else {
+			
+			const [movedItem] = updatedTodos.splice(index, 1);
+			updatedTodos.unshift(movedItem);
+
+			setTodos(updatedTodos);
+		}
+	}
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
@@ -65,6 +102,8 @@ function App() {
 						done={done}
 						onDeleteButtonClick={() => deleteItem(id)}
 						onDoneButtonClick={() => finishItem(id)}
+						onUpButtonClick={() => moveUpItem(id)}
+						onDownButtonClick={() => moveDownItem(id)}
 					/>
 				))}
 			</ul>
