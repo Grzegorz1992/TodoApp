@@ -3,7 +3,6 @@ import styles from "./App.module.css";
 import { Form } from "./components/Form/Form";
 import { TodoItem } from "./components/TodoItem/TodoItem";
 import { getSubheading } from "./utils/getSubheading";
-import { DragDropContext } from 'react-beautiful-dnd';
 
 function App() {
 	const [isFormShown, setIsFormShown] = useState(false);
@@ -11,7 +10,6 @@ function App() {
 		{ name: "Zapłać rachunki", done: false, id: 1 },
 		{ name: "Wyrzuć śmieci", done: true, id: 2 },
 	]);
-	const [draggedItem, setDraggedItem] = useState(null);
 
 	function addItem(newTodoName) {
 		setTodos((prevTodos) => [
@@ -39,30 +37,6 @@ function App() {
 		);
 	}
 
-	function handleDragStart(id) {
-		setDraggedItem(id);
-	}
-
-	function handleDragOver(event) {
-		event.preventDefault();
-	}
-
-	function handleDrop(id) {
-		if (draggedItem !== id) {
-			const updatedTodos = [...todos];
-			const draggedIndex = todos.findIndex((todo) => todo.id === draggedItem);
-			const dropIndex = todos.findIndex((todo) => todo.id === id);
-
-			[updatedTodos[draggedIndex], updatedTodos[dropIndex]] = [
-				updatedTodos[dropIndex],
-				updatedTodos[draggedIndex],
-			];
-
-			setTodos(updatedTodos);
-			setDraggedItem(null);
-		}
-	}
-
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
@@ -82,6 +56,7 @@ function App() {
 			{isFormShown && (
 				<Form onFormSubmit={(newTodoName) => addItem(newTodoName)} />
 			)}
+
 			<ul>
 				{todos.map(({ id, name, done }) => (
 					<TodoItem
@@ -90,9 +65,6 @@ function App() {
 						done={done}
 						onDeleteButtonClick={() => deleteItem(id)}
 						onDoneButtonClick={() => finishItem(id)}
-						onDragStart={() => handleDragStart(id)}
-						onDragOver={handleDragOver}
-						onDrop={() => handleDrop(id)}
 					/>
 				))}
 			</ul>
