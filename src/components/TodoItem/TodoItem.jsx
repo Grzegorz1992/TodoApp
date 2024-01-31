@@ -19,6 +19,7 @@ export function TodoItem({
 
 	function onCancelEditedTodo() {
 		setEditTodo(false);
+		setInputValue("");
 	}
 
 	function onSaveEditedTodo() {
