@@ -1,4 +1,5 @@
 import { Button } from "../Button/Button";
+import { EditTodo } from "../EditTodo/EditTodo";
 import styles from "./TodoItem.module.css";
 import { useState } from "react";
 
@@ -12,6 +13,7 @@ export function TodoItem({
 }) {
 	const [editTodo, setEditTodo] = useState(false);
 	const [inputValue, setInputValue] = useState("");
+	// const [saveEditedTodo, setSaveEditedTodo] = useState(false);
 
 	function onEditButtonClick() {
 		setEditTodo(true);
@@ -31,7 +33,7 @@ export function TodoItem({
 			{!editTodo ? (
 				<li className={styles.item}>
 					<span className={`${styles.name} ${done ? styles.done : ""}`}>
-						{inputValue.length > 1 ? inputValue : name}
+						{inputValue.length > 0 ? inputValue : name}
 					</span>
 					{!done && <Button onClick={onDoneButtonClick}>Zrobione</Button>}
 					<Button onClick={onDeleteButtonClick} className={styles.redButton}>
@@ -50,17 +52,25 @@ export function TodoItem({
 					</div>
 				</li>
 			) : (
-				<li className={styles.item}>
-					<input
-						value={inputValue}
-						onChange={(e) => setInputValue(e.target.value)}
-						className={styles.input}
-						type="text"
-					/>
-					<Button onClick={onSaveEditedTodo}>Zapisz</Button>
-					<Button onClick={onCancelEditedTodo}>Anuluj</Button>
-				</li>
+				<EditTodo
+					value={inputValue}
+					onCancelEditedTodo={() => onCancelEditedTodo()}
+					onSaveEditedTodo={() => onSaveEditedTodo()}
+					onChange={(e) => setInputValue(e.target.value)}
+				/>
 			)}
 		</>
 	);
 }
+
+// <li className={styles.item}>
+// 					<input
+// 						value={inputValue}
+// 						onChange={(e) => setInputValue(e.target.value)}
+// 						className={styles.input}
+// 						type="text"
+// 					/>
+// 					<Button onClick={onSaveEditedTodo}>Zapisz</Button>
+
+// 					<Button onClick={onCancelEditedTodo}>Anuluj</Button>
+// 				</li>

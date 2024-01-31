@@ -67,13 +67,13 @@ function App() {
 
 			setTodos(updatedTodos);
 		} else {
-			
 			const [movedItem] = updatedTodos.splice(index, 1);
 			updatedTodos.unshift(movedItem);
 
 			setTodos(updatedTodos);
 		}
 	}
+
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
