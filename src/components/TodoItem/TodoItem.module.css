@@ -17,6 +17,10 @@
 	text-decoration: line-through;
 }
 
+.unDone {
+	text-decoration: none;
+}
+
 .redButton {
 	color: tomato;
 	border: solid 1px currentColor;

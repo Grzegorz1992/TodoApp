@@ -13,7 +13,6 @@ export function TodoItem({
 }) {
 	const [editTodo, setEditTodo] = useState(false);
 	const [inputValue, setInputValue] = useState("");
-	// const [saveEditedTodo, setSaveEditedTodo] = useState(false);
 
 	function onEditButtonClick() {
 		setEditTodo(true);
@@ -62,15 +61,3 @@ export function TodoItem({
 		</>
 	);
 }
-
-// <li className={styles.item}>
-// 					<input
-// 						value={inputValue}
-// 						onChange={(e) => setInputValue(e.target.value)}
-// 						className={styles.input}
-// 						type="text"
-// 					/>
-// 					<Button onClick={onSaveEditedTodo}>Zapisz</Button>
-
-// 					<Button onClick={onCancelEditedTodo}>Anuluj</Button>
-// 				</li>
