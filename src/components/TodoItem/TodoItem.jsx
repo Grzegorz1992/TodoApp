@@ -38,9 +38,14 @@ export function TodoItem({
 					<Button onClick={onDeleteButtonClick} className={styles.redButton}>
 						Usuń
 					</Button>
-					<Button onClick={onEditButtonClick} className={styles.editButton}>
-						Edytuj
-					</Button>
+					{!done ? (
+						<Button onClick={onEditButtonClick} className={styles.editButton}>
+							Edytuj
+						</Button>
+					) : (
+						""
+					)}
+
 					<div className={styles.upDownButtons}>
 						<Button onClick={onUpButtonClick} className={styles.upButton}>
 							<span className={styles.arrowUp}>▲</span>
