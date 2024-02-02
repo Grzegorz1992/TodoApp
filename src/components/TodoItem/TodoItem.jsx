@@ -25,7 +25,7 @@ export function TodoItem({
 
 	function onSaveEditedTodo() {
 		setEditTodo(false);
-		setInputValue("")
+		setInputValue("");
 	}
 
 	return (
@@ -66,7 +66,6 @@ export function TodoItem({
 					className={
 						inputValue.length === 0 ? styles.disabledButton : styles.button
 					}
-					onBackToEditedTodo = {() => onEditButtonClick()}
 				/>
 			)}
 		</>
