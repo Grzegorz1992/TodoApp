@@ -61,6 +61,10 @@ export function TodoItem({
 					onCancelEditedTodo={() => onCancelEditedTodo()}
 					onSaveEditedTodo={() => onSaveEditedTodo()}
 					onChange={(e) => setInputValue(e.target.value)}
+					disabled={inputValue.length === 0}
+					className={
+						inputValue.length === 0 ? styles.disabledButton : styles.button
+					}
 				/>
 			)}
 		</>
