@@ -34,8 +34,12 @@
 .warning {
 	display: flex;
 	flex-direction: column;
+	gap: 10px;
 }
 
 .warningButtons {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
 }

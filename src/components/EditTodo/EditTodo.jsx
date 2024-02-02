@@ -8,6 +8,8 @@ export function EditTodo({
 	onCancelEditedTodo,
 	disabled,
 	className,
+	onSaveEditedTodo,
+	onBackToEditedTodo
 }) {
 	const [warning, setWarning] = useState(false);
 
@@ -36,8 +38,8 @@ export function EditTodo({
 					<div className={styles.warning}>
 						<p>Czy na pewno chcesz edytować zadanie?</p>
 						<div className={styles.warningButtons}>
-							<Button>Tak</Button>
-							<Button>Nie</Button>
+							<Button onClick={onSaveEditedTodo}>Tak</Button>
+							<Button onClick={onBackToEditedTodo}>Wróć do edycji zadania</Button>
 						</div>
 					</div>
 				</li>
