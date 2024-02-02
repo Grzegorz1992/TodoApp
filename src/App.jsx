@@ -104,7 +104,6 @@ function App() {
 						onDoneButtonClick={() => finishItem(id)}
 						onUpButtonClick={() => moveUpItem(id)}
 						onDownButtonClick={() => moveDownItem(id)}
-					
 					/>
 				))}
 			</ul>
