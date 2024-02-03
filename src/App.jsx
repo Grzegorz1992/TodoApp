@@ -77,8 +77,8 @@ function App() {
 	return (
 		<div className={styles.container}>
 			<header className={styles.header}>
-				<div>
-					<h1>Do zrobienia</h1>
+				<div className={styles.heading}>
+					<h1>TodoApp</h1>
 					<h2>{getSubheading(todos.length)}</h2>
 				</div>
 				{!isFormShown && (

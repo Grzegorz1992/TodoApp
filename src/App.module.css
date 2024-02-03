@@ -1,5 +1,8 @@
 .container {
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-color: #fff;
 	padding: 24px 64px;
 	border-radius: 12px;
@@ -12,7 +15,20 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 100px;
-	padding: 32px;
+	
+	
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap:10px;
+	text-align: center;
+	padding: 12px;
+	
+	
 }
 
 .button {
