@@ -78,6 +78,7 @@ function App() {
 		<div className={styles.container}>
 			<header className={styles.header}>
 				<div>
+					<button>...</button>
 					<h1>TodoApp</h1>
 					<h2>{getSubheading(todos.length)}</h2>
 				</div>
