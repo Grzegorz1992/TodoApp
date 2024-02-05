@@ -1,6 +1,8 @@
 import { Button } from "../Button/Button";
 import styles from "./EditTodo.module.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFloppyDisk, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export function EditTodo({
 	value,
@@ -27,10 +29,10 @@ export function EditTodo({
 						disabled={disabled}
 						onClick={() => setWarning(true)}
 					>
-						Zapisz
+						<FontAwesomeIcon icon={faFloppyDisk} />
 					</button>
 
-					<Button onClick={onCancelEditedTodo}>Anuluj</Button>
+					<Button onClick={onCancelEditedTodo}><FontAwesomeIcon icon={faRectangleXmark} /></Button>
 				</li>
 			) : (
 				<li className={styles.item}>

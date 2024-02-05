@@ -3,7 +3,7 @@ import { EditTodo } from "../EditTodo/EditTodo";
 import styles from "./TodoItem.module.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashCan, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan, faCircleCheck, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 export function TodoItem({
 	name,
@@ -46,7 +46,7 @@ export function TodoItem({
 					</Button>
 					{!done ? (
 						<Button onClick={onEditButtonClick} className={styles.editButton}>
-							Edytuj
+							<FontAwesomeIcon icon={faPenToSquare} />
 						</Button>
 					) : (
 						""
