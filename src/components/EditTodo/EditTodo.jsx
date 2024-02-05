@@ -37,11 +37,11 @@ export function EditTodo({
 			) : (
 				<li className={styles.item}>
 					<div className={styles.warning}>
-						<p>Czy na pewno chcesz edytować zadanie?</p>
+						<p>Czy na pewno chcesz zapisać zmiany w tym zadaniu?</p>
 						<div className={styles.warningButtons}>
 							<Button onClick={onSaveEditedTodo}>Tak</Button>
 							<Button onClick={() => setWarning(false)}>
-								Wróć do edycji zadania
+								Nie
 							</Button>
 						</div>
 					</div>
