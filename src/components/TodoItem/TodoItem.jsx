@@ -2,6 +2,8 @@ import { Button } from "../Button/Button";
 import { EditTodo } from "../EditTodo/EditTodo";
 import styles from "./TodoItem.module.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 export function TodoItem({
 	name,
@@ -36,7 +38,7 @@ export function TodoItem({
 					</span>
 					{!done && <Button onClick={onDoneButtonClick}>Zrobione</Button>}
 					<Button onClick={onDeleteButtonClick} className={styles.redButton}>
-						Usuń
+						<FontAwesomeIcon icon={faTrashCan} />
 					</Button>
 					{!done ? (
 						<Button onClick={onEditButtonClick} className={styles.editButton}>
