@@ -79,7 +79,8 @@
 	border-radius: 4px;
 }
 
-.button {
+.button,
+.diskButton {
 	color: var(--color-main);
 	background-color: transparent;
 	border: solid 1px currentColor;
@@ -100,4 +101,13 @@
 	color: #666666;
 	border-radius: 4px;
 	padding: 4px 8px;
+}
+
+.diskButton {
+	color: rgb(15, 193, 15);
+}
+
+.diskButton:hover {
+	background-color: rgb(15, 193, 15);
+	color: white;
 }

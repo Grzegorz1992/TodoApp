@@ -32,7 +32,7 @@ export function EditTodo({
 						<FontAwesomeIcon icon={faFloppyDisk} />
 					</button>
 
-					<Button onClick={onCancelEditedTodo}><FontAwesomeIcon icon={faRectangleXmark} /></Button>
+					<Button className={styles.xmark} onClick={onCancelEditedTodo}><FontAwesomeIcon icon={faRectangleXmark} /></Button>
 				</li>
 			) : (
 				<li className={styles.item}>

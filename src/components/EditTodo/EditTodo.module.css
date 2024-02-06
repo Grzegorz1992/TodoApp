@@ -43,3 +43,12 @@
 	align-items: center;
 	gap: 50px;
 }
+
+.xmark {
+	color: tomato;
+}
+
+.xmark:hover {
+	background-color: tomato;
+	color: white;
+}

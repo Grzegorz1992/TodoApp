@@ -1,6 +1,6 @@
 .container {
 	position: absolute;
-	top: 30%;
+	top: 25%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: rgba(0, 0, 0, 0.9);
@@ -20,12 +20,31 @@
 
 .closeModal {
 	position: relative;
-    bottom: 60px;
-	left:450px;
-    padding: 6px;
-    border: none;
-    background: none;
-    color: white;
-    cursor: pointer;
-    font-size: 26px;
+	bottom: 60px;
+	left: 450px;
+	padding: 6px;
+	border: none;
+	background: none;
+	color: white;
+	cursor: pointer;
+	font-size: 26px;
+}
+
+.check {
+	color: var(--color-main);
+}
+
+.trash {
+	color: tomato;
+}
+
+.edit {
+	color: rgb(15, 193, 15);
+}
+
+.xmark {
+	color: tomato;
+}
+.disk {
+	color: rgb(15, 193, 15);
 }

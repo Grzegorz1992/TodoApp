@@ -13,31 +13,31 @@ export function Modal({onClick}) {
 		<div className={styles.container}>
 			<button className={styles.closeModal} onClick={onClick}>x</button>
 			<div className={styles.item}>
-				<p>
+				<p className={styles.check}>
 					<FontAwesomeIcon icon={faCircleCheck} />
 				</p>
 				<p>Zaznacz zadanie jako zrobione</p>
 			</div>
 			<div className={styles.item}>
-				<p>
+				<p className={styles.trash}>
 					<FontAwesomeIcon icon={faTrashCan} />
 				</p>
 				<p>Usuń zadanie</p>
 			</div>
 			<div className={styles.item}>
-				<p>
+				<p className={styles.edit}>
 					<FontAwesomeIcon icon={faPenToSquare} />
 				</p>
 				<p>Edytuj zadanie</p>
 			</div>
 			<div className={styles.item}>
-				<p>
+				<p className={styles.disk}>
 					<FontAwesomeIcon icon={faFloppyDisk} />
 				</p>
 				<p>Zapisz edytowane zadanie</p>
 			</div>
 			<div className={styles.item}>
-				<p>
+				<p className={styles.xmark}>
 					<FontAwesomeIcon icon={faRectangleXmark} />
 				</p>
 				<p>Przerwij edycje zadania</p>

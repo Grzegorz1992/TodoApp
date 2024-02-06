@@ -69,7 +69,7 @@ export function TodoItem({
 					onChange={(e) => setInputValue(e.target.value)}
 					disabled={inputValue.length === 0}
 					className={
-						inputValue.length === 0 ? styles.disabledButton : styles.button
+						inputValue.length === 0 ? styles.disabledButton : styles.diskButton
 					}
 				/>
 			)}
