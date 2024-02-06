@@ -52,3 +52,20 @@
 	background-color: tomato;
 	color: white;
 }
+
+.yesButton {
+	color: rgb(15, 193, 15);
+
+	&:hover {
+		color: white;
+		background-color: rgb(15, 193, 15);
+	}
+}
+.noButton {
+	color: tomato;
+
+	&:hover {
+		color: white;
+		background-color: tomato;
+	}
+}

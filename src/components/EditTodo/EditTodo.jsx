@@ -2,7 +2,10 @@ import { Button } from "../Button/Button";
 import styles from "./EditTodo.module.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFloppyDisk, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+	faFloppyDisk,
+	faRectangleXmark,
+} from "@fortawesome/free-solid-svg-icons";
 
 export function EditTodo({
 	value,
@@ -32,17 +35,17 @@ export function EditTodo({
 						<FontAwesomeIcon icon={faFloppyDisk} />
 					</button>
 
-					<Button className={styles.xmark} onClick={onCancelEditedTodo}><FontAwesomeIcon icon={faRectangleXmark} /></Button>
+					<Button className={styles.xmark} onClick={onCancelEditedTodo}>
+						<FontAwesomeIcon icon={faRectangleXmark} />
+					</Button>
 				</li>
 			) : (
 				<li className={styles.item}>
 					<div className={styles.warning}>
 						<p>Czy na pewno chcesz zapisać zmiany w tym zadaniu?</p>
 						<div className={styles.warningButtons}>
-							<Button onClick={onSaveEditedTodo}>Tak</Button>
-							<Button onClick={() => setWarning(false)}>
-								Nie
-							</Button>
+							<Button className={styles.yesButton} onClick={onSaveEditedTodo}>Tak</Button>
+							<Button className={styles.noButton} onClick={() => setWarning(false)}>Nie</Button>
 						</div>
 					</div>
 				</li>

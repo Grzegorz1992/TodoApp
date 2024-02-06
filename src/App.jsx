@@ -81,15 +81,16 @@ function App() {
 	return (
 		<>
 			<div className={showModal ? styles.containerBlur : styles.container}>
+				<div className={styles.dotsBox}>
+					<button
+						className={styles.dotsButton}
+						onClick={() => setShowModal(true)}
+					>
+						<FontAwesomeIcon icon={faEllipsis} />
+					</button>
+				</div>
 				<header className={styles.header}>
 					<div>
-						<button
-							className={styles.dotsButton}
-							onClick={() => setShowModal(true)}
-						>
-							<FontAwesomeIcon icon={faEllipsis} />
-						</button>
-
 						<h1>TodoApp</h1>
 						<h2>{getSubheading(todos.length)}</h2>
 					</div>
