@@ -79,47 +79,49 @@ function App() {
 	}
 
 	return (
-		<div className={styles.container}>
-			<header className={styles.header}>
-				<div>
-					<button
-						className={styles.dotsButton}
-						onClick={() => setShowModal(true)}
-					>
-						<FontAwesomeIcon icon={faEllipsis} />
-					</button>
-					{showModal && <Modal onClick={() => setShowModal(false)} />}
+		<>
+			<div className={showModal ? styles.containerBlur : styles.container}>
+				<header className={styles.header}>
+					<div>
+						<button
+							className={styles.dotsButton}
+							onClick={() => setShowModal(true)}
+						>
+							<FontAwesomeIcon icon={faEllipsis} />
+						</button>
 
-					<h1>TodoApp</h1>
-					<h2>{getSubheading(todos.length)}</h2>
-				</div>
-				{!isFormShown && (
-					<button
-						onClick={() => setIsFormShown(true)}
-						className={styles.button}
-					>
-						+
-					</button>
+						<h1>TodoApp</h1>
+						<h2>{getSubheading(todos.length)}</h2>
+					</div>
+					{!isFormShown && (
+						<button
+							onClick={() => setIsFormShown(true)}
+							className={styles.button}
+						>
+							+
+						</button>
+					)}
+				</header>
+				{isFormShown && (
+					<Form onFormSubmit={(newTodoName) => addItem(newTodoName)} />
 				)}
-			</header>
-			{isFormShown && (
-				<Form onFormSubmit={(newTodoName) => addItem(newTodoName)} />
-			)}
 
-			<ul>
-				{todos.map(({ id, name, done }) => (
-					<TodoItem
-						key={id}
-						name={name}
-						done={done}
-						onDeleteButtonClick={() => deleteItem(id)}
-						onDoneButtonClick={() => finishItem(id)}
-						onUpButtonClick={() => moveUpItem(id)}
-						onDownButtonClick={() => moveDownItem(id)}
-					/>
-				))}
-			</ul>
-		</div>
+				<ul>
+					{todos.map(({ id, name, done }) => (
+						<TodoItem
+							key={id}
+							name={name}
+							done={done}
+							onDeleteButtonClick={() => deleteItem(id)}
+							onDoneButtonClick={() => finishItem(id)}
+							onUpButtonClick={() => moveUpItem(id)}
+							onDownButtonClick={() => moveDownItem(id)}
+						/>
+					))}
+				</ul>
+			</div>
+			{showModal && <Modal onClick={() => setShowModal(false)} />}
+		</>
 	);
 }
 
