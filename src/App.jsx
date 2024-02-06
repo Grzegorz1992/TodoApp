@@ -5,6 +5,7 @@ import { TodoItem } from "./components/TodoItem/TodoItem";
 import { getSubheading } from "./utils/getSubheading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import { Modal } from "./components/Modal/Modal";
 
 function App() {
 	const [isFormShown, setIsFormShown] = useState(false);
@@ -12,6 +13,7 @@ function App() {
 		{ name: "Zapłać rachunki", done: false, id: 1 },
 		{ name: "Wyrzuć śmieci", done: true, id: 2 },
 	]);
+	const [showModal, setShowModal] = useState(false);
 
 	function addItem(newTodoName) {
 		setTodos((prevTodos) => [
@@ -80,9 +82,14 @@ function App() {
 		<div className={styles.container}>
 			<header className={styles.header}>
 				<div>
-					<button className={styles.dotsButton}>
+					<button
+						className={styles.dotsButton}
+						onClick={() => setShowModal(true)}
+					>
 						<FontAwesomeIcon icon={faEllipsis} />
 					</button>
+					{showModal && <Modal onClick={() => setShowModal(false)} />}
+
 					<h1>TodoApp</h1>
 					<h2>{getSubheading(todos.length)}</h2>
 				</div>

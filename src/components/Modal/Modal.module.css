@@ -1,0 +1,31 @@
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
+	padding: 72px;
+	padding-left: 65px;
+	border-radius: 12px;
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.item {
+	display: flex;
+	padding: 8px;
+	gap: 25px;
+}
+
+.closeModal {
+	position: relative;
+    bottom: 60px;
+	left:400px;
+    padding: 6px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 26px;
+}

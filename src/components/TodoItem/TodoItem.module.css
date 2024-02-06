@@ -72,15 +72,6 @@
 	}
 }
 
-.arrowUp {
-	position: relative;
-	top: 4px;
-}
-.arrowDown {
-	position: relative;
-	bottom: 4px;
-}
-
 .input {
 	width: 100%;
 	padding: 8px;
