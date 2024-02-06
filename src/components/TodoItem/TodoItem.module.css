@@ -1,12 +1,12 @@
 .item {
-	list-style-type: none;
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	border-top: 1px solid black;
-	margin-top: 16px;
 	padding-top: 16px;
+	margin-top: 16px;
 	min-width: 400px;
+	list-style-type: none;
+	border-top: 1px solid black;
 }
 
 .name {
@@ -45,11 +45,11 @@
 .upButton,
 .downButton {
 	color: rgb(83, 77, 77);
-	border: 1px solid currentColor;
+	padding: 2px 4px;
 	font-size: 14px;
 	font-weight: bold;
+	border: 1px solid currentColor;
 	border-radius: 0px;
-	padding: 2px 4px;
 }
 
 .upButton {
@@ -73,8 +73,8 @@
 }
 
 .input {
-	width: 100%;
 	padding: 8px;
+	width: 100%;
 	border: solid 1px currentColor;
 	border-radius: 4px;
 }
@@ -84,8 +84,8 @@
 	color: var(--color-main);
 	background-color: transparent;
 	border: solid 1px currentColor;
-	border-radius: 4px;
 	padding: 4px 8px;
+	border-radius: 4px;
 	cursor: pointer;
 	transition: all 0.3s;
 }
@@ -96,11 +96,11 @@
 }
 
 .disabledButton {
-	border: 1px solid #999999;
-	background-color: #cccccc;
 	color: #666666;
-	border-radius: 4px;
+	background-color: #cccccc;
 	padding: 4px 8px;
+	border: 1px solid #999999;
+	border-radius: 4px;
 }
 
 .diskButton {

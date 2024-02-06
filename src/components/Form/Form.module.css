@@ -4,8 +4,8 @@
 	margin-top: 24px;
 }
 .input {
-	width: 100%;
 	padding: 8px;
+	width: 100%;
 	border: solid 1px currentColor;
 	border-radius: 4px;
 }
@@ -13,9 +13,9 @@
 .formButton {
 	color: var(--color-main);
 	background-color: transparent;
+	padding: 4px 8px;
 	border: solid 1px currentColor;
 	border-radius: 4px;
-	padding: 4px 8px;
 	cursor: pointer;
 	transition: all 0.3s;
 
@@ -26,10 +26,10 @@
 }
 
 .disabledButton {
-	border: 1px solid #999999;
-	background-color: #cccccc;
 	color: #666666;
-	border-radius: 4px;
+	background-color: #cccccc;
 	padding: 4px 8px;
+	border: 1px solid #999999;
+	border-radius: 4px;
 }
 

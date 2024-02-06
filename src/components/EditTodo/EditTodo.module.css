@@ -1,27 +1,27 @@
 .input {
-	width: 100%;
 	padding: 8px;
+	width: 100%;
 	border: solid 1px currentColor;
 	border-radius: 4px;
 }
 
 .item {
-	list-style-type: none;
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	border-top: 1px solid black;
-	margin-top: 16px;
 	padding-top: 16px;
+	margin-top: 16px;
 	min-width: 400px;
+	border-top: 1px solid black;
+	list-style-type: none;
 }
 
 .button {
 	color: var(--color-main);
 	background-color: transparent;
 	border: solid 1px currentColor;
-	border-radius: 4px;
 	padding: 4px 8px;
+	border-radius: 4px;
 	cursor: pointer;
 	transition: all 0.3s;
 }
