@@ -3,6 +3,8 @@ import styles from "./App.module.css";
 import { Form } from "./components/Form/Form";
 import { TodoItem } from "./components/TodoItem/TodoItem";
 import { getSubheading } from "./utils/getSubheading";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
 	const [isFormShown, setIsFormShown] = useState(false);
@@ -78,7 +80,9 @@ function App() {
 		<div className={styles.container}>
 			<header className={styles.header}>
 				<div>
-					<button>...</button>
+					<button className={styles.dotsButton}>
+						<FontAwesomeIcon icon={faEllipsis} />
+					</button>
 					<h1>TodoApp</h1>
 					<h2>{getSubheading(todos.length)}</h2>
 				</div>
