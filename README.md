@@ -8,11 +8,13 @@ Check out the live demo [here](https://reactodoappbygmk.netlify.app/).
 
 ## Used Technologies
 
-- ![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react)
-- ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
-- ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3)
-- ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5)
-- ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=vite)
+[](https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png)
+[](https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png)
+[](https://github.com/marwin1991/profile-technology-icons/assets/62091613/b40892ef-efb8-4b0e-a6b5-d1cfc2f3fc35)
+[](https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png)
+[](https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png)
+
+
 
 ## Description
 
